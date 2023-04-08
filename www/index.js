@@ -78,7 +78,7 @@ const drawCells = () => {
     ctx.stroke();
 };
 
-run_git_fetch_test();
+run_git_fetch_test().then((res) => console.log(res));
 
 drawGrid();
 drawCells();
