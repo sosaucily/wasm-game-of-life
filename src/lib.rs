@@ -1,3 +1,4 @@
+mod fetcher;
 mod utils;
 
 use std::fmt;
@@ -5,13 +6,6 @@ use std::fmt;
 use wasm_bindgen::prelude::*;
 
 extern crate web_sys;
-
-// A macro to provide `println!(..)`-style syntax for `console.log` logging.
-macro_rules! log {
-    ( $( $t:tt )* ) => {
-        web_sys::console::log_1(&format!( $( $t )* ).into());
-    }
-}
 
 // When the `wee_alloc` feature is enabled, use `wee_alloc` as the global
 // allocator.
