@@ -30,7 +30,7 @@ pub struct Signature {
 }
 
 #[wasm_bindgen]
-pub async fn run() -> Result<JsValue, JsValue> {
+pub async fn run_git_fetch_test() -> Result<JsValue, JsValue> {
     log!("Fetching branch info...");
     let res = match reqwest::Client::new()
         .get("https://api.github.com/repos/rustwasm/wasm-bindgen/branches/master")
